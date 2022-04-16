@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Vervoer Adviseur</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+        <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+        <script defer src="./js/app.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h2>Vervoer Adviseur</h2>
+        <div id="fields">
+        <p>Voer het weer in en wij geven u een advies!</p>    
+        <label>Hoeveelheid Neerslag (MM)</label>
+        <input type="text" id="precipitation">
+        <label>Minimale Temperatuur (Celcius)</label>
+        <input type="text" id="MinTemp">
+        <label>Maximale Temperatuur (Celcius)</label>
+        <input type="text" id="MaxTemp">
+        <label>Windkracht</label>
+        <input type="text" id="Wind">
+        <input id="Predict" type="button" value="Click Me!">
+        
+        <div id="output">
+        <p>Ik verwacht dat morgen het volgende weer is: <a id="Prediction"></a></p>
+        <p>Ik ben hier <a id="confidence">..</a>% zeker van.</p>
+        <p>Daarom adviseer ik een van deze vervoersmiddelen: <a id="transport"></a></p>
+        </div>
+        </div>
+    </body>
+</html>
